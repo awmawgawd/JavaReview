@@ -61,7 +61,27 @@ public class String2 {
 		
 		message += String.format("letters: %s%n", letters); // Output letters //abcde
 		
-		message += letters == more;
+		message += (letters == more) + "\n";
+		
+		
+		
+		/* Check equality */
+		StringBuilder one = new StringBuilder("hi");
+		StringBuilder two = new StringBuilder("hi");
+		
+		message += "one == two: " + (one == two) + "\n"; // False // Compares reference and not value
+		message += "one.equals(two): " + one.equals(two) + "\n"; // False // Compares reference and not value
+		/* Convert to String format using toString() method and compare*/
+		message += "one.toString().equals(two.toString(): " + one.toString().equals(two.toString()) + "\n"; // True // Values are the same
+		
+		/* Alternative: Convert to String format using toString() method and compare*/
+		String oneS = one.toString();
+		String twoS = two.toString();
+		message += "oneS = one.toString\n";
+		message += "twoS = two.toString()\n";
+		message += "oneS == twoS: " + (oneS == twoS) + "\n"; // False // 2 different String objects 
+		message += "oneS.equals(twoS): " + oneS.equals(twoS) + "\n"; // True // Values are the same
+		
 		
 		
 		
